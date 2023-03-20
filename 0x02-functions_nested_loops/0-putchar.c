@@ -1,9 +1,11 @@
 #include "main.h"
-/*
- * main - Print _putchar
- * Return: Always 0
+/**
+ * main - Entry point
+ *
+ * Description: a program that prints _putchar
+ *
+ * Return:int should return an int
  */
-
 int main(void)
 {
 	_putchar('_');
