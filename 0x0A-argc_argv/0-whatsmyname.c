@@ -1,13 +1,16 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-int main(int argc, char *argv[])
+/**
+ * main - prints its name, followed by a new line.
+ * @argc: argument count
+ * @argv: arguments
+ *
+ * Return: 0
+ */
+int main(int argc, char **argv)
 {
-int i;
-printf("argc = %d\n", argc);
+	(void)argc;
 
-        for(i =0; i < argc; i++)
-           printf("argv[%d]= %s\n",i, argv[i]);
-        
-return 0;
+	printf("%s\n", argv[0]);
+	return (0);
 }
