@@ -11,32 +11,29 @@
 
 int main(int argc, char *argv[])
 {
-int i, sum = 0;
-char *flag;
+int i, x, sum = 0;
+char *flagError;
 
 if (argc < 2)
 {
 	printf("0\n");
-		return (0);
+	return (0);
 }
-if (argc > 1)
-{
-
 	for (i = 1; i < argc; i++)
 	{
-		
-	printf("argv[%d]= %s\n",i, argv[i]);
-	sum+= atoi( argv[i]);
-
-	if (*flag)
-		{
-			printf("Error\n");
-			return (1);
-		}
+		x = strtol(argv[i], &flagError, 10);
+		/*sum+= atoi( argv[i]);*/
+	if (*flagError)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	else
+	{
+		sum += x;
+	}
 	}
 	printf("Sum of argc = %d\n", sum);
-}
-return 0;
-}
 
- 
+return (0);
+}
